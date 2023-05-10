@@ -20,11 +20,17 @@
     font-size: 1rem;
     color: white;
     border-style: none;
+    margin-bottom: 1rem;
+    -webkit-box-shadow: 5px 4px 4px 1px rgba(0,0,0,0.5); 
+    box-shadow: 5px 4px 4px 1px rgba(0,0,0,0.5);
 }
 
 button{
     margin-left: 1em;
     border-style: none;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 4px 4px 1px rgba(0,0,0,0.5); 
+    box-shadow: 5px 4px 4px 1px rgba(0,0,0,0.5);
 }
 
 .container > input, button{
@@ -40,8 +46,13 @@ button{
 
 
 li{
+    width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
     font-size: 1.5rem;
-    line-height: 3rem;
+    margin-bottom: 1rem;
+    border: 1px solid black;
+    cursor: pointer;
 }
 
 ul button{
