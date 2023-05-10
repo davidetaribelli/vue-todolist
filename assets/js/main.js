@@ -35,11 +35,12 @@ const { createApp } = Vue
       },
       // funzione che aggiunge la classe "dashed" alla task completata
       getClass(i){  
-        return (this.taskList[i].done === true) ? "noStyle dashed" : "noStyle";
+        return (this.taskList[i].done === true) ? "noStyle dashed " : "noStyle";
       },
       // funzione che cambia il [done] da true a false o viceversa
       change(i){
         this.taskList[i].done = !this.taskList[i].done;
+        
       }
     }
   }).mount('#app')

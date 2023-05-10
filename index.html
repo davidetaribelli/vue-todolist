@@ -23,7 +23,8 @@
                     <!-- creo un ciclo per aggiungere la mia lista -->
                     <li v-for="(task, i) in taskList" :class="getClass(i)" @click="change(i)">
                         <!-- stampo liste già esistenti in [taskList] -->
-                        {{task}}
+                        <span>{{task.text}}</span>
+                        <small :class="(task.done == true) ? 'greenTrue' : 'redFalse' "> {{task.done}} </small>
                         <!-- bottoene che elimina task completate -->
                         <button @click="remove(i)">
                             <i class="fa-solid fa-x"></i>
