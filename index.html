@@ -7,11 +7,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <div id="app">
-        
+
+        <div class="container">
+            <!-- creo un input dove l'utente può aggiungere delle cose da fare aggiungendole tramite tasto [enter] oppure con bottone -->
+            <input type="text" v-model="newTask.text" @keyUp.enter="addTask" placeholder="Scrivi cosa devi fare in modo da ricordarlo">
+            <button @click="addTask"> Add a task </button>
+            
+            <div class="list">
+                <ul>
+                    <!-- creo un ciclo per aggiungere la mia lista -->
+                    <li v-for="(task, i) in taskList" :class="getClass(i)" @click="change(i)">
+                        <!-- stampo liste già esistenti in [taskList] -->
+                        {{task}}
+                        <!-- bottoene che elimina task completate -->
+                        <button @click="remove(i)">
+                            <i class="fa-solid fa-x"></i>
+                        </button>
+                        
+                        <!-- aggiungendo il click al testo questa funziona non funzione più, utilizzato per cancellare le task già svolte-->
+                        <button @click="change(i)">
+                            <i class="fa-solid fa-arrow-rotate-right"></i>
+                        </button>
+                        
+                    </li>
+                </ul>
+            </div>
+
+        </div>
     </div>
     
     <script src="./assets/js/main.js"></script>

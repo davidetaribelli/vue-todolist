@@ -1,0 +1,53 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: 0 auto;
+    width: 1000px;
+    min-height: 700px;
+    border-radius: 1rem;
+    padding: 1rem;
+    background-color: #b5e550;
+}
+
+.container > input{
+    width: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    border-style: none;
+}
+
+button{
+    margin-left: 1em;
+    border-style: none;
+}
+
+.container > input, button{
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: #023020;
+    color: white;
+}
+
+.noStyle{
+    list-style:none;
+}
+
+
+li{
+    font-size: 1.5rem;
+    line-height: 3rem;
+}
+
+ul button{
+    border-radius: 50%; 
+}
+
+.dashed{
+    text-decoration: line-through;
+}
